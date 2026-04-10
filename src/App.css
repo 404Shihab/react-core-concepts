@@ -191,3 +191,11 @@
   padding: 25px;
   border-radius:15px;
 }
+.friend{
+  border: 2px solid darkblue;
+  background-color: rgb(163, 209, 224);
+  margin: 15px;
+  padding: 25px;
+  border-radius:15px;
+  color: darkblue;
+}
