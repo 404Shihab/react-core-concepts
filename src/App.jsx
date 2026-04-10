@@ -2,6 +2,11 @@ import Counter from './counter'
 import './App.css'
 import './Batsman'
 import Batsman from './Batsman';
+import Api from './Api';
+import { Suspense } from 'react';
+
+const fetchUser = fetch("https://jsonplaceholder.typicode.com/users")
+    .then(res=> res.json())
 
 function App() {
 
@@ -20,6 +25,9 @@ function App() {
   }
   return (
     <>
+    <Suspense fallback={<h3>Loading....</h3>}>
+      <Api fetchUser={fetchUser}></Api>
+    </Suspense>
     <Counter></Counter>
     <Batsman></Batsman>
     <button onClick={handleClick}>CLick Me</button>
